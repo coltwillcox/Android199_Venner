@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">Android199_Venner</string>
+
+    <string name="app_name">Venner</string>
+
+    <string name="fragmentlogin_header">Welcome to Venner</string>
+    <string name="fragmentlogin_email_title">Email</string>
+    <string name="fragmentlogin_email_hint">email@example.com</string>
+    <string name="fragmentlogin_password_title">Password</string>
+    <string name="fragmentlogin_password_hint">Minimum 6 chars</string>
+    <string name="fragmentlogin_button_login">Login</string>
+    <string name="fragmentlogin_button_createaccount">Create account</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

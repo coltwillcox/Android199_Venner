@@ -1,13 +1,86 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/fragment_login"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             android:background="@color/colorPrimary"
              tools:context="com.koltinjo.venner.login.FragmentLogin">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+            android:id="@+id/fragmentlogin_relativelayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:gravity="center_horizontal">
+
+        <TextView
+                android:id="@+id/fragmentlogin_textview_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/fragmentlogin_header"
+                style="@style/Label.Header"/>
+
+        <!--Email.-->
+        <TextView
+                android:id="@+id/fragmentlogin_textview_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragmentlogin_textview_header"
+                android:text="@string/fragmentlogin_email_title"
+                style="@style/Label.Sub"/>
+
+        <EditText
+                android:id="@+id/fragmentlogin_edittext_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragmentlogin_textview_email"
+                android:hint="@string/fragmentlogin_email_hint"
+                style="@style/InputField.Credential.Email"/>
+
+        <!--Password.-->
+        <TextView
+                android:id="@+id/fragmentlogin_textview_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragmentlogin_edittext_email"
+                android:text="@string/fragmentlogin_password_title"
+                style="@style/Label.Sub"/>
+
+        <EditText
+                android:id="@+id/fragmentlogin_edittext_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragmentlogin_textview_password"
+                android:hint="@string/fragmentlogin_password_hint"
+                style="@style/InputField.Credential.Password"/>
+
+        <!--Buttons.-->
+        <Button
+                android:id="@+id/fragmentlogin_button_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragmentlogin_edittext_password"
+                android:layout_centerHorizontal="true"
+                android:text="@string/fragmentlogin_button_login"
+                style="@style/Button.Flat.Primary"/>
+
+        <Button
+                android:id="@+id/fragmentlogin_button_createaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragmentlogin_button_login"
+                android:layout_centerHorizontal="true"
+                android:text="@string/fragmentlogin_button_createaccount"
+                style="@style/Button.Flat.Primary"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+            android:id="@+id/fragmentlogin_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
 
 </FrameLayout>
