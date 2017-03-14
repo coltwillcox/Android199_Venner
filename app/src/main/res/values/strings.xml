@@ -10,6 +10,16 @@
     <string name="fragmentlogin_button_login">Login</string>
     <string name="fragmentlogin_button_createaccount">Create account</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmentcreateaccount_header">Create a new account</string>
+    <string name="fragmentcreateaccount_name_title">Name</string>
+    <string name="fragmentcreateaccount_name_hint">John Smith</string>
+    <string name="fragmentcreateaccount_confirm_title">Confirm</string>
+    <string name="fragmentcreateaccount_button_create">CREATE ACCOUNT</string>
+
+    <string name="fragmentprofilepage_biography_title">About Me</string>
+    <string name="fragmentprofilepage_biography_example">Tell us a bit about yourself!</string>
+    <string name="fragmentprofilepage_interests_title">Interests</string>
+    <string name="fragmentprofilepage_interests_example">What are your favourite things to do?</string>
+    <string name="fragmentprofilepage_action_logout">Log out?</string>
+
 </resources>

@@ -18,6 +18,44 @@
         <item name="android:layout_marginRight">64dp</item>
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="Label.UserAvatarEmail">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:alpha">.86</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="Label.UserAvatarName" >
+        <item name="android:textSize">38sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="Label.DetailSubHeader">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:alpha">.86</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+    <style name="Label.EditDetailSubHeader">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:alpha">.86</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+    <style name="Label.UserDetailContent">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:minHeight">124dp</item>
+        <item name="android:alpha">.86</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
 
     <!--Input fields.-->
     <style name="InputField" parent="Widget.AppCompat.EditText"/>
@@ -37,6 +75,15 @@
     </style>
 
     <!--Containers.-->
+    <style name="Container"/>
+    <style name="Container.UserDetails">
+        <item name="android:elevation">8dp</item>
+        <item name="android:background">@drawable/background_user_details</item>
+    </style>
+    <style name="Container.UserAvatar">
+        <item name="android:elevation">8dp</item>
+        <item name="android:background">@drawable/background_user_avatar</item>
+    </style>
 
     <!--Buttons.-->
     <style name="Button.Flat" parent="Widget.AppCompat.Button.Borderless"/>
@@ -51,5 +98,12 @@
     </style>
 
     <!--Others.-->
+    <style name="DividerAccent">
+        <item name="android:background">@drawable/divider_horizontal_accent</item>
+    </style>
+    <style name="DividerAccent.UserDetail">
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
 
 </resources>

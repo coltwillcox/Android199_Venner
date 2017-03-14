@@ -1,13 +1,167 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.koltinjo.venner.profilepage.FragmentProfilePage">
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context="com.koltinjo.venner.profilepage.FragmentProfilePage">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+            android:id="@+id/fragmentprofilepage_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
 
-</FrameLayout>
+        <RelativeLayout
+                android:id="@+id/fragmentprofilepage_relativelayout_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                style="@style/Container.UserAvatar">
+
+            <ImageButton
+                    android:id="@+id/fragmentprofilepage_imagebutton_logout"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@null"
+                    android:src="@drawable/ic_vpn_key_white_24dp"/>
+
+            <ImageButton
+                    android:id="@+id/fragmentprofilepage_imagebutton_usersettings"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/fragmentprofilepage_imagebutton_logout"
+                    android:background="@null"
+                    android:src="@drawable/ic_settings_white_24dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragmentprofilepage_circleimageview_thumbnail"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="1dp"/>
+
+            <TextView
+                    android:id="@+id/fragmentprofilepage_textview_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/fragmentprofilepage_textview_email"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/fragmentprofilepage_circleimageview_thumbnail"
+                    tools:text="Derp Derpsen"
+                    style="@style/Label.UserAvatarName"/>
+
+            <TextView
+                    android:id="@+id/fragmentprofilepage_textview_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="64dp"
+                    android:layout_toRightOf="@id/fragmentprofilepage_circleimageview_thumbnail"
+                    tools:text="derp@test.com"
+                    style="@style/Label.UserAvatarEmail"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/fragmentprofilepage_relativelayout_biography"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                style="@style/Container.UserDetails">
+
+            <TextView
+                    android:id="@+id/fragmentprofilepage_textview_biographysub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+                    android:text="@string/fragmentprofilepage_biography_title"
+                    style="@style/Label.DetailSubHeader"/>
+
+            <View
+                    android:id="@+id/fragmentprofilepage_view_biographydivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/fragmentprofilepage_textview_biographysub"
+                    style="@style/DividerAccent.UserDetail"/>
+
+            <TextView
+                    android:id="@+id/fragmentprofilepage_textview_biographyuser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fragmentprofilepage_view_biographydivider"
+                    android:ellipsize="end"
+                    style="@style/Label.UserDetailContent"
+                    tools:text="@string/fragmentprofilepage_biography_example"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/fragmentprofilepage_relativelayout_interests"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                style="@style/Container.UserDetails">
+
+            <TextView
+                    android:id="@+id/fragmentprofilepage_textview_interestssub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_star_border_black_24dp"
+                    android:text="@string/fragmentprofilepage_interests_title"
+                    style="@style/Label.DetailSubHeader"/>
+
+            <View
+                    android:id="@+id/fragmentprofilepage_view_interestsdivider"
+                    style="@style/DividerAccent.UserDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/fragmentprofilepage_textview_interestssub"/>
+
+            <TextView
+                    android:id="@+id/fragmentprofilepage_textview_interests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fragmentprofilepage_view_interestsdivider"
+                    android:background="@drawable/background_user_details"
+                    android:ellipsize="end"
+                    tools:text="@string/fragmentprofilepage_interests_example"
+                    style="@style/Label.UserDetailContent"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fragmentprofilepage_fab_detailsedit"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="16dp"
+                android:background="@color/colorAccent"
+                android:scaleType="center"
+                android:src="@drawable/ic_create_white_24dp"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

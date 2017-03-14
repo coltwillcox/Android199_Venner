@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/fragmentcreateaccount"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorPrimary"
+             tools:context="com.koltinjo.venner.createaccount.FragmentCreateAccount">
+
+    <ScrollView
+            android:id="@+id/fragmentcreateaccount_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:id="@+id/fragmentcreateaccount_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="16dp"
+                android:gravity="center_horizontal">
+
+            <!--Header.-->
+            <TextView
+                    android:id="@+id/fragmentcreateaccount_textview_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/fragmentcreateaccount_header"
+                    style="@style/Label.Header"/>
+
+            <!--Name.-->
+            <TextView
+                    android:id="@+id/fragmentcreateaccount_textview_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_textview_header"
+                    android:text="@string/fragmentcreateaccount_name_title"
+                    style="@style/Label.Sub"/>
+
+            <EditText
+                    android:id="@+id/fragmentcreateaccount_edittext_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_textview_name"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/fragmentcreateaccount_name_hint"
+                    style="@style/InputField.Credential.Email"/>
+
+            <!--Email.-->
+            <TextView
+                    android:id="@+id/fragmentcreateaccount_textview_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_edittext_name"
+                    android:text="@string/fragmentlogin_email_title"
+                    style="@style/Label.Sub"/>
+
+            <EditText
+                    android:id="@+id/fragmentcreateaccount_edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_textview_email"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/fragmentlogin_email_hint"
+                    style="@style/InputField.Credential.Email"/>
+
+            <!--Password.-->
+            <TextView
+                    android:id="@+id/fragmentcreateaccount_textview_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_edittext_email"
+                    android:text="@string/fragmentlogin_password_title"
+                    style="@style/Label.Sub"/>
+
+            <EditText
+                    android:id="@+id/fragmentcreateaccount_edittext_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_textview_password"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/fragmentlogin_password_hint"
+                    style="@style/InputField.Credential.Password"/>
+
+            <!--Confirm password.-->
+            <TextView
+                    android:id="@+id/fragmentcreateaccount_textview_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_edittext_password"
+                    android:text="@string/fragmentcreateaccount_confirm_title"
+                    style="@style/Label.Sub"/>
+
+            <EditText
+                    android:id="@+id/fragmentcreateaccount_edittext_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragmentcreateaccount_textview_confirm"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/fragmentlogin_password_hint"
+                    style="@style/InputField.Credential.Password"/>
+
+            <!--Button.-->
+            <Button
+                    android:id="@+id/fragmentcreateaccount_button_createaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_below="@+id/fragmentcreateaccount_edittext_confirm"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/fragmentcreateaccount_button_create"
+                    style="@style/Button.Flat.Primary"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
